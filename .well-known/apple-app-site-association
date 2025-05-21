@@ -7,5 +7,10 @@
         "paths": [ "*" ]
       }
     ]
+  },
+  "webcredentials": {
+    "apps": [
+      "4J5SVRN47C.de.bessermittag.app"
+    ]
   }
 }
