@@ -1,8 +1,16 @@
 [build]
   publish = "."
 
+# Redirect the AASA request to the real .json file:
+[[redirects]]
+  from = "/.well-known/apple-app-site-association"
+  to   = "/.well-known/apple-app-site-association.json"
+  status = 200
+  force  = true
+
+# Ensure correct headers
 [[headers]]
-  for = "/.well-known/apple-app-site-association"
+  for = "/.well-known/apple-app-site-association.json"
   [headers.values]
     Content-Type = "application/json"
     Cache-Control = "public, max-age=0"
