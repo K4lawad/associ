@@ -3,8 +3,28 @@
     "apps": [],
     "details": [
       {
-        "appID": "4J5SVRN47C.de.bessermittag.app",
-        "paths": [ "*" ]
+        "appID":["4J5SVRN47C.de.bessermittag.app","4J5SVRN47C.de.bessermittag.app"],
+        "components": [
+               {
+                  "#": "no_universal_links",
+                  "exclude": true,
+                  "comment": "Matches any URL with a fragment that equals no_universal_links and instructs the system not to open it as a universal link."
+               },
+               {
+                  "/": "/buy/*",
+                  "comment": "Matches any URL with a path that starts with /buy/."
+               },
+               {
+                  "/": "/help/website/*",
+                  "exclude": true,
+                  "comment": "Matches any URL with a path that starts with /help/website/ and instructs the system not to open it as a universal link."
+               },
+               {
+                  "/": "/help/*",
+                  "?": { "articleNumber": "????" },
+                  "comment": "Matches any URL with a path that starts with /help/ and that has a query item with name 'articleNumber' and a value of exactly four characters."
+               }
+             ]
       }
     ]
   },
@@ -12,5 +32,8 @@
     "apps": [
       "4J5SVRN47C.de.bessermittag.app"
     ]
-  }
+  },
+  "appclips": {
+        "apps": ["4J5SVRN47C.de.bessermittag.app"]
+    }
 }
